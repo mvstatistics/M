@@ -1,0 +1,42 @@
+
+c_variacion <- function(objeto){
+    cv <- objeto %>% summarise(
+        Td1 = survey_total(dom01, vartype = "cv"),
+        Td2 = survey_total(dom02, vartype = "cv"),
+        Td3 = survey_total(dom03, vartype = "cv"),
+        Td4 = survey_total(dom04, vartype = "cv"),
+        Td5 = survey_total(dom05, vartype = "cv"),
+        Td6 = survey_total(dom06, vartype = "cv"),
+        Td7 = survey_total(dom07, vartype = "cv"),
+        Td8 = survey_total(dom08, vartype = "cv"),
+        Td9 = survey_total(dom09, vartype = "cv"),
+        Td10 = survey_total(dom10, vartype = "cv"),
+        Td11 = survey_total(dom11, vartype = "cv"),
+        Td12 = survey_total(dom12, vartype = "cv"),
+        Td13 = survey_total(dom13, vartype = "cv"),
+        Td14 = survey_total(dom14, vartype = "cv"),
+        Td15 = survey_total(dom15, vartype = "cv"),
+        Td16 = survey_total(dom16, vartype = "cv"),
+        Td17 = survey_total(dom17, vartype = "cv"),
+        Td18 = survey_total(dom18, vartype = "cv"),
+        Td19 = survey_total(dom19, vartype = "cv"),
+        Td20 = survey_total(dom20, vartype = "cv"),
+        Td21 = survey_total(dom21, vartype = "cv"),
+        Td22 = survey_total(dom22, vartype = "cv"),
+        Td23 = survey_total(dom23, vartype = "cv"),
+        Td24 = survey_total(dom24, vartype = "cv"),
+        Td25 = survey_total(dom25, vartype = "cv"),
+        Td26 = survey_total(dom26, vartype = "cv"),
+        Td27 = survey_total(dom27, vartype = "cv"),
+        Td28 = survey_total(dom28, vartype = "cv"),
+        Td29 = survey_total(dom29, vartype = "cv"),
+        Td90 = survey_total(dom90, vartype = "cv"),
+        Th = survey_total(hombre, vartype = "cv"),
+        Tm = survey_total(mujer, vartype = "cv"),
+        Tu = survey_total(urbano, vartype = "cv"),
+        Tr = survey_total(rural, vartype = "cv"),
+        Te1 = survey_total(edad1, vartype = "cv"),
+        Te2 = survey_total(edad2, vartype = "cv"))
+    
+    return(as.data.frame(cv))
+}
